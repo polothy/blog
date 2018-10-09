@@ -1,0 +1,39 @@
+baseURL = "https://polothy.github.io/"
+languageCode = "en-us"
+title = "Blog"
+theme = "beautifulhugo"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsStyle = "dracula"
+enableEmoji = true
+
+[Params]
+  homeTitle = "/dev/null"
+  subtitle = "Random collection of treasures from my coding travels"
+  dateFormat = "January 2, 2006"
+  readingTime = true
+  rss = true
+  # socialShare = true
+
+[Author]
+  name = "Mark Nielsen"
+  github = "polothy"
+  website = "https://polothy.github.io/"
+  twitter = "polothy"
+  linkedin = "mark-nielsen-21a982162"
+
+
+# https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

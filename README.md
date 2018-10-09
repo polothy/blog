@@ -1,2 +1,3 @@
-# blog
-Files used to generate my blog
+# Blog
+
+Files used to generate my blog.
