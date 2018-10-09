@@ -1,5 +1,3 @@
-# TODO: Set mail for things...
-
 .PHONEY: publish
 publish: | public themes/beautifulhugo static/css/syntax.css
 	hugo
@@ -10,12 +8,9 @@ publish: | public themes/beautifulhugo static/css/syntax.css
 themes/beautifulhugo:
 	git clone https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
 
-static/css/syntax.css: | static/css
+static/css/syntax.css:
 	# try paraiso-dark
 	hugo gen chromastyles --style=dracula > static/css/syntax.css
-
-static/css:
-	mkdir static/css
 
 public:
 	git clone git@github.com:polothy/polothy.github.io.git public

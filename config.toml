@@ -13,7 +13,13 @@ enableEmoji = true
   dateFormat = "January 2, 2006"
   readingTime = true
   rss = true
+  logo = "img/gopher-spirit-coffee.png"
+  # favicon = "img/favicon.ico"
   # socialShare = true
+
+# [[Params.bigimg]]
+  # src = "img/coffee.jpg"
+  # desc = "It's coffee"
 
 [Author]
   name = "Mark Nielsen"
