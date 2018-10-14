@@ -4,6 +4,8 @@ publish: | public themes/beautifulhugo static/css/syntax.css
 	cd public && git add -A .
 	cd public && git commit -m "Publishing site $(shell date)"
 	cd public && git push origin master
+	@echo
+	@echo "Published to https://polothy.github.io"
 
 themes/beautifulhugo:
 	git clone https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
