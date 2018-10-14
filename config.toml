@@ -16,10 +16,12 @@ enableEmoji = true
   logo = "img/gopher-spirit-coffee.png"
   # favicon = "img/favicon.ico"
   # socialShare = true
+  # useHLJS = true
 
 # [[Params.bigimg]]
   # src = "img/coffee.jpg"
   # desc = "It's coffee"
+  # position = "center top"
 
 [Author]
   name = "Mark Nielsen"
@@ -27,7 +29,17 @@ enableEmoji = true
   website = "https://polothy.github.io/"
   twitter = "polothy"
   linkedin = "mark-nielsen-21a982162"
+  # bitbucket = "username"
 
+# [[menu.main]]
+#     name = "About"
+#     url = "page/about/"
+#     weight = 3
+
+# [[menu.main]]
+#     name = "Tags"
+#     url = "tags"
+#     weight = 3
 
 # https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
