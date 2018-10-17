@@ -1,6 +1,7 @@
 ---
 title: "Makefile for your dotfiles"
 date: 2018-10-09T21:15:27-07:00
+tags: ["makefile", "dotfiles", "homebrew"]
 ---
 
 Using a `Makefile` for your `dotfiles` can help simplify your dot file life!
@@ -61,7 +62,7 @@ unlink:
 
 _What's happening?_
 
-* First, create the `HOMEFILES` varible which is a list of our files in the
+* First, create the `HOMEFILES` variable which is a list of our files in the
   `dotfiles/home` directory.  A list in `make` is just space separated list,
   EG: `foo bar baz` is a list of three items.
 * `DOTFILES` variable is used to create a list of files that we want to create in
@@ -79,7 +80,7 @@ _What's happening?_
 * The `unlink` target iterates over your dot files in your `$HOME` directory
   and _interactively_ deletes your dot files _only if_ that file is a symbolic link.
 
-So, perhaps I got a little verbose in my explination, but it ends up creating
+So, perhaps I got a little verbose in my explanation, but it ends up creating
 a pretty simple `Makefile` and the result is very safe.  You can re-run `make link`
 as you add new files to `dotfiles/home`.  You can run `make unlink` anytime and
 it asks you for confirmation before unlinking anything.  And on top of that,

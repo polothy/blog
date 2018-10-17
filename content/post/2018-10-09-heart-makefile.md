@@ -1,6 +1,7 @@
 ---
 title: "<3 Makefile"
 date: 2018-10-09T19:45:24-07:00
+tags: ["makefile"]
 ---
 
 The secret is out, I really like a good `Makefile`!
@@ -25,7 +26,7 @@ I noticed some key things about my projects that were converted to using a
 Now with `make`, I am automating _all the things_ and writing less documentation.
 Win win for me.  Another great thing about `make` is that it is usually already
 installed. This means that most people do not have to install something in order
-use your automation tool of choice (EG: it's as convient as Bash scripts).
+use your automation tool of choice (EG: it's as convenient as Bash scripts).
 
 Some other things I like about `make`:
 
