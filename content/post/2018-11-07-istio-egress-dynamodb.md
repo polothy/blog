@@ -1,7 +1,7 @@
 ---
 title: "Istio Egress to DynamoDB"
 date: 2018-11-07T14:26:17-08:00
-tags: ["istio", "aws", "dynamodb", "egress"]
+tags: ["istio", "aws", "dynamodb", "kubernetes"]
 ---
 
 Took a while to figure out how to properly configure Istio egress to allow a service to talk to DynamoDB.  I didn't find many up-to-date resources out there on the topic, so decided to share what worked for me.
