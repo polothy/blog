@@ -1,5 +1,5 @@
 ---
-title: "Istio Egress to AWS Dynamodb"
+title: "Istio Egress to DynamoDB"
 date: 2018-11-07T14:26:17-08:00
 tags: ["istio", "aws", "dynamodb", "egress"]
 ---
