@@ -8,8 +8,8 @@ pygmentsStyle = "dracula"
 enableEmoji = true
 
 [Params]
-  homeTitle = "/dev/null"
-  subtitle = "Random collection of treasures from my coding travels"
+  homeTitle = "Mark Nielsen"
+  subtitle = "A personal tech blog"
   dateFormat = "January 2, 2006"
   readingTime = true
   rss = true
