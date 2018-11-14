@@ -1,6 +1,7 @@
 ---
 title: "Open in Emacs"
 date: 2018-11-13T19:27:56-08:00
+tags: ["emacs", "spacemacs"]
 ---
 
 How to open a file/directory or pipe output to Emacs GUI from the terminal.
