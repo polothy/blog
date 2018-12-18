@@ -14,6 +14,7 @@ enableEmoji = true
   readingTime = true
   rss = true
   logo = "img/gopher-spirit-coffee.png"
+  showRelatedPosts = true
   # favicon = "img/favicon.ico"
   # socialShare = true
   # useHLJS = true
