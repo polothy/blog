@@ -1,0 +1,41 @@
+---
+title: "Kube Prompt"
+date: 2019-03-13T20:49:08-07:00
+tags: ["kubernetes", "zsh"]
+---
+
+Been switching between Kubernetes clusters a lot and needed a way to keep track
+of current context and namespace, =kube-ps1= to the rescue!
+
+<!--more-->
+
+I was constantly checking to see if I was in the correct context and namespace
+before running commands, I needed something to help me out. I went searching and
+found [[https://github.com/jonmosco/kube-ps1][kube-ps1]]. It is very easy to install (=brew install kube-ps1=). I was able
+to set it to =$RPROMPT= env variable so it displays on the right in ZSH:
+
+#+BEGIN_SRC shell
+# Source kube-ps1.
+if [[ -s "/usr/local/opt/kube-ps1/share/kube-ps1.sh" ]]; then
+    source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+    export RPROMPT='$(kube_ps1)'
+fi
+#+END_SRC
+
+Then I, /of course/, customized the look a little:
+
+#+BEGIN_SRC shell
+# kube-ps1 configs.
+export KUBE_PS1_PREFIX=''
+export KUBE_PS1_SEPARATOR=''
+export KUBE_PS1_SUFFIX=''
+export KUBE_PS1_NS_COLOR=blue
+export KUBE_PS1_CTX_COLOR=magenta
+#+END_SRC
+
+Last thing I'll mention is that =kube-ps1= comes with two nifty commands to
+toggle the prompt. You can use =kubeoff= to flip it off for your current
+session. Then use =kubeon= to flip it back on. Either one takes a =-g= flag
+to turn it on or off globally.
+
+So far, really like it and helps me to keep track of where I am in Kubernetes.
