@@ -34,6 +34,8 @@ OK, continuing on.  What makes it more complicated than other editors is that yo
 # Usage: ec file.txt
 # OR:    echo "hi" | ec
 
+#set -ex
+
 PARAMS=(-a '' -nq -s ~/.emacs.d/server/server)
 
 # Determine if Emacs is running already or not.
@@ -46,17 +48,16 @@ if [ -z "$1" ]; then
     cat >$TMP
     emacsclient "${PARAMS[@]}" $TMP &> /dev/null
     rm $TMP
-elif [ -e "$1" ]; then
-    emacsclient "${PARAMS[@]}" "$1" &> /dev/null
 else
-    echo "Error: argument passed does not appear to be a file or directory."
-    exit 1
+    emacsclient "${PARAMS[@]}" "$1" &> /dev/null
 fi
 ```
 
+**UPDATE:** I modified the above script to no longer verify if the passed argument is a file or directory that exists.  Reason being, if you want to make a new file, you can with the new code, EG: `ec newfile.txt`. 
+
 This goes into a file named `ec` (or whatever you want) which should be in your `$PATH`.  What this does is first detects if the Emacs server is running by looking for the server socket file (we defined the location of that above). If the server is running, then Emacs is already open, so I omit the `-c` parameter to open in the current frame. Otherwise, I use `-c` to open a new frame.
 
-The second thing the script does is detect if there is no argument.  If that's the case, then it sends the piped output to the temporary file, opens the file in Emacs GUI and then removes the file.  Otherwise, if there is an argument that is a file/directory, open that via Emacs GUI.
+The second thing the script does is detect if there is no argument.  If that's the case, then it sends the piped output to the temporary file, opens the file in Emacs GUI and then removes the file.  Otherwise, if there is an argument, open that via Emacs GUI.
 
 Is it perfect? Probably not.  Detection of piping output into the script could be improved _a lot_.  I'm betting that the detection of Emacs server running could also be improved. For example, I could imagine a scenario where the server is still running, but I have closed all the frames. But, I'm not shooting for absolute perfection, I can now handle my to main use cases:
 
