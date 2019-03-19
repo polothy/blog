@@ -1,7 +1,7 @@
 ---
 title: "Kube Prompt"
 date: 2019-03-13T20:49:08-07:00
-tags: ["kubernetes", "zsh"]
+tags: ["kubernetes", "zsh", "awesome-cli"]
 ---
 
 Been switching between Kubernetes clusters a lot and needed a way to keep track
