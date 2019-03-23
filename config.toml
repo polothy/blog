@@ -4,7 +4,6 @@ title = "Blog"
 theme = "beautifulhugo"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
-pygmentsStyle = "dracula"
 enableEmoji = true
 
 [Params]

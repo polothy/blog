@@ -22,7 +22,7 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 For me, I just enabled it for `git diff` and `git show` by adding the following
 to my `.gitconfig` file:
 
-```gitconfig
+```.gitconfig
 [pager]
 	diff = diff-so-fancy | less --tabs=4 -RFX
 	show = diff-so-fancy | less --tabs=4 -RFX
@@ -31,7 +31,7 @@ to my `.gitconfig` file:
 Also in the install, they recommend adding some colors to the `git diff` output.
 I already had a lot set, so mine ended up looking like this:
 
-```gitconfig
+```.gitconfig
 [color]
   pager = true
   ui = auto

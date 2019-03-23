@@ -10,7 +10,6 @@ publish: | public themes/beautifulhugo static/css/syntax.css
 themes/beautifulhugo:
 	git clone https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
 
-# try paraiso-dark
 static/css/syntax.css:
 	hugo gen chromastyles --style=dracula > static/css/syntax.css
 
