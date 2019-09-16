@@ -12,6 +12,8 @@ jobs:
 
     - name: Checkout master
       uses: actions/checkout@v1
+      with:
+        submodules: true
 
     - name: Build and publish blog
       env:
