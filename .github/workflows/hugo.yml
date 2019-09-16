@@ -1,4 +1,4 @@
-name: Go
+name: Publish Blog with Hugo
 on:
   push:
     branches:
@@ -19,6 +19,4 @@ jobs:
         TARGET_REPO: polothy/polothy.github.io
         TOKEN: ${{ secrets.TOKEN }}
       run: |
-        make themes/beautifulhugo
-        make static/css/syntax.css
         scripts/action.sh
