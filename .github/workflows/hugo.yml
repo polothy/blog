@@ -1,0 +1,22 @@
+name: Go
+on:
+  push:
+    branches:
+    - master
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout master
+      uses: actions/checkout@v1
+      env:
+        HUGO_VERSION: 0.58.2
+        TARGET_REPO: polothy/polothy.github.io
+        TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        make themes/beautifulhugo
+        make static/css/syntax.css
+        scripts/action.sh
