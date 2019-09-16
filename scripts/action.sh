@@ -46,7 +46,7 @@ echo 'Committing the site to git and pushing'
 
     cd "${BUILD_DIR}"
 
-    if git diff --exit-code; then
+    if git diff --exit-code > /dev/null 2>&1; then
         echo "There is nothing to commit, so aborting"
         exit 0
     fi
