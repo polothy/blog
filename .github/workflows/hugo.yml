@@ -12,6 +12,8 @@ jobs:
 
     - name: Checkout master
       uses: actions/checkout@v1
+
+    - name: Build and publish blog
       env:
         HUGO_VERSION: 0.58.2
         TARGET_REPO: polothy/polothy.github.io
