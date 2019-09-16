@@ -41,13 +41,8 @@ cp -r public/* build/
 
 echo 'Committing the site to git and pushing'
 (
-    if git config --get user.name; then
-        git config --global user.name "${GITHUB_ACTOR}"
-    fi
-
-    if ! git config --get user.email; then
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-    fi
+    git config --global user.name "polothy"
+    git config --global user.email "634657+polothy@users.noreply.github.com"
 
     cd "${BUILD_DIR}"
 
